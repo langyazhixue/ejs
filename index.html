@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+<div id="div3"></div>
+<script src="./js/ejs.js"></script>
+<script>
+    var html = ejs.render('<%=123 %>','');
+	var template = ejs.compile('<%=456 %>');
+    var result = template();
+    //console.log(result);//123
+    document.getElementById('div1').innerHTML = template;
+	  document.getElementById('div2').innerHTML = result;
+	  document.getElementById('div3').innerHTML = html;
+</script>
+</body>
+</html>
